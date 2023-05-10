@@ -1,32 +1,21 @@
-import Head from 'next/head';
-import Layout, {siteTitle} from '../components/layout';
+import Layout from '../components/layout';
 import utilStyles from '../styles/utils.module.css';
 import {getSortedPostsData} from '../lib/posts';
 import Link from 'next/link';
 import Date from '../components/date';
+import Card from "../components/card";
 
 
-export default function Home({allPostsData}) {
-    return (<Layout home>
-            {/* Keep the existing code here */}
-
-            {/* Add this <section> tag below the existing <section> tag */}
-            <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
-                <h2 className={utilStyles.headingLg}>Blog</h2>
-                <ul className={utilStyles.list}>
-                    {allPostsData.map(({id, date, title}) => (
-                        <li className={utilStyles.listItem} key={id}>
-                            <Link href={`/posts/${id}`}>{title}</Link>
-                            <br />
-                            <small className={utilStyles.lightText}>
-                                <Date dateString={date} />
-                            </small>
-                        </li>
-
-                    ))}
-                </ul>
-            </section>
-        </Layout>);
+export default function Home(props) {
+    return (<Layout home posts={props.allPostsData}>
+        <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
+            <div className={"w-full h-0.5 bg-gray-500 my-16"}></div>
+            <h2 className={utilStyles.headingXl}>Blog</h2>
+            <div className={"flex gap-4 pt-8"}>
+                {props.allPostsData.map((post, i) => <Card key={post.title} img={post.img} title={post.title} date={post.date} />)}
+            </div>
+        </section>
+    </Layout>);
 }
 
 export async function getStaticProps() {
@@ -38,10 +27,3 @@ export async function getStaticProps() {
     };
 }
 
-// export async function getServerSideProps(context) {
-//     return {
-//         props: {
-//             // props for your component
-//         },
-//     };
-// }
