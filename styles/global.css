@@ -32,3 +32,26 @@ img {
   display: block;
 }
 
+/* add styling to li ol and ul */
+li {
+  margin: 1rem 0;
+}
+
+ol,
+ul {
+  padding-left: 1.5rem;
+}
+
+ol {
+    list-style: decimal;
+}
+
+ul {
+    list-style: disc;
+}
+
+
+input[type="text"]:focus ~ .input-text,
+input[type="text"]:not(:placeholder-shown) ~ .input-text{
+  @apply text-purple-700 transform -translate-y-12 md:-translate-y-10 -translate-x-2 scale-75;
+}
