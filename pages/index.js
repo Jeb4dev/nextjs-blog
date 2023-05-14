@@ -1,30 +1,28 @@
-import utilStyles from '../styles/utils.module.css';
+import utilStyles from "../styles/utils.module.css";
 import styles from "../components/layout.module.css";
-import Layout from '../components/layout';
+import Layout from "../components/layout";
 import { request } from "../lib/datocms";
-import { Image } from "react-datocms"
-
+import { Image } from "react-datocms";
 
 export default function Home(props) {
-    const { data } = props;
-    const posts = data.allArticles;
-    const footer = data.footer;
-    const content = data.frontpageContent;
-    return (
-        <Layout home posts={posts} footer={footer} formImage={data.frontpageContent.formImage} meta={content._seoMetaTags}>
-            <header className={styles.header}>
-                <h1 className={utilStyles.heading2Xl}>{content.name}</h1>
-                <Image data={content.image.responsiveImage} alt={"Illustrative image"} className={"rounded-full my-8"} />
-                <h2 className={"text-center max-w-lg"}>{content.description}</h2>
-            </header>
-            <main className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
-                <div className={"w-full h-0.5 bg-gray-500 my-16"}></div>
-                <h2 className={utilStyles.headingXl}>Blog</h2>
-            </main>
-        </Layout>
-    );
+  const { data } = props;
+  const posts = data.allArticles;
+  const footer = data.footer;
+  const content = data.frontpageContent;
+  return (
+    <Layout home posts={posts} footer={footer} formImage={data.frontpageContent.formImage} meta={content._seoMetaTags}>
+      <header className={styles.header}>
+        <h1 className={utilStyles.heading2Xl}>{content.name}</h1>
+        <Image data={content.image.responsiveImage} alt={"Illustrative image"} className={"rounded-full my-8"} />
+        <h2 className={"text-center max-w-lg"}>{content.description}</h2>
+      </header>
+      <main className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
+        <div className={"w-full h-0.5 bg-gray-500 my-16"}></div>
+        <h2 className={utilStyles.headingXl}>Blog</h2>
+      </main>
+    </Layout>
+  );
 }
-
 
 const HOMEPAGE_QUERY = `
 query MyQuery {
@@ -116,10 +114,10 @@ query MyQuery {
 }
 `;
 export async function getStaticProps() {
-    const data = await request({
-        query: HOMEPAGE_QUERY,
-    });
-    return {
-        props: { data }
-    };
+  const data = await request({
+    query: HOMEPAGE_QUERY,
+  });
+  return {
+    props: { data },
+  };
 }
