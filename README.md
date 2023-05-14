@@ -15,7 +15,7 @@ available [blog.jeb4.dev/](https://blog.jeb4.dev/).
 
 ## Performance
 
-[![Google lighthouse performance analysis](https://github.com/Jeb4dev/nextjs-blog/assets/76889226/d5806c39-4635-4fe4-8ca9-86de9e8f6be2)](https://pagespeed.web.dev/analysis/https-blog-jeb4-dev/orql0617w4?form_factor=desktop)
+[![Google lighthouse performance analysis](https://cdn.discordapp.com/attachments/492188265487532032/1107405009626341456/d5806c39-4635-4fe4-8ca9-86de9e8f6be2.png)](https://pagespeed.web.dev/analysis/https-blog-jeb4-dev/orql0617w4?form_factor=desktop)
 
 I was able to get full 100 scores on desktop, on mobile side google analytics lost few points of the performance score.
 
