@@ -11,7 +11,7 @@ export default function Home(props) {
     const footer = data.footer;
     const content = data.frontpageContent;
     return (
-        <Layout home posts={posts} footer={footer} formImage={data.frontpageContent.formImage}>
+        <Layout home posts={posts} footer={footer} formImage={data.frontpageContent.formImage} meta={content._seoMetaTags}>
             <header className={styles.header}>
                 <h1 className={utilStyles.heading2Xl}>{content.name}</h1>
                 <Image data={content.image.responsiveImage} alt={"Illustrative image"} className={"rounded-full my-8"} />
@@ -60,6 +60,11 @@ query MyQuery {
         webpSrcSet
         width
       }
+    }
+    _seoMetaTags {
+      tag
+      content
+      attributes
     }
   }
   footer {

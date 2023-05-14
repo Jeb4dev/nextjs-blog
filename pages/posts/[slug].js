@@ -10,7 +10,7 @@ export default function Post(props) {
     const footer = props.footer;
 
     return (
-        <Layout posts={props.allPostsData} footer={footer} formImage={false}>
+        <Layout posts={props.allPostsData} footer={footer} formImage={false} meta={data._seoMetaTags}>
             <Head>
                 <title>{data.title}</title>
             </Head>
@@ -138,6 +138,31 @@ query MyQuery($slug: String, $first: IntType = "33") {
     publishDate
     slug
     title
+    metadata {
+      twitterCard
+      title
+      description
+      image {
+        responsiveImage {
+          width
+          webpSrcSet
+          title
+          srcSet
+          src
+          sizes
+          height
+          bgColor
+          base64
+          aspectRatio
+          alt
+        }
+      }
+    }
+    _seoMetaTags {
+      tag
+      content
+      attributes
+    }
   }
   allArticles(first: $first, filter: {slug: {neq: $slug}}) {
     publishDate
