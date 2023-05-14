@@ -84,7 +84,7 @@ export default function Layout({children, posts, footer, formImage}) {
                     <div>
                         <h3 className={"font-bold mb-4"}>Blog posts</h3>
 
-                        <ul>
+                        <ul className={"list-none p-0"}>
                             <li className={"py-2"}><Link className={"underline text-white"} href={"/posts/" + posts[0].slug}>
                                 Link to first post</Link></li>
                             <li className={"py-2"}><Link className={"underline text-white"} href={"/posts/" + posts[1].slug}>

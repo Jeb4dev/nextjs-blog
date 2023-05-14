@@ -25,13 +25,13 @@ export default function Post(props) {
                     </div>
                 </div>
 
-                <div className={"h-[25rem]"}>
-                    <Image data={data.coverImage.responsiveImage} alt={"Illustrative image"} className={"h-full"} objectFit={"cover"} />
+                <div className={"h-[10rem] sm:min-h-[15rem] md:h-[25rem]"}>
+                    <Image data={data.coverImage.responsiveImage} alt={"Illustrative image"} className={"h-full w-full"} objectFit={"cover"} />
                 </div>
 
                 <Link className={"text-black"} href="/">← <span className={"underline"}>Back to home</span></Link>
 
-                <h1 className={"font-bold text-5xl py-4"}>{data.title}</h1>
+                <h1 className={"font-bold text-3xl md:text-5xl py-4"}>{data.title}</h1>
 
                 <StructuredText
                     data={data.content}
