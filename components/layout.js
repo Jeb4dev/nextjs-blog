@@ -132,11 +132,11 @@ export default function Layout({children, posts, footer, formImage, meta, articl
                 <div className={styles.container}>
                     <div className={"flex flex-col sm:flex-row px-8 gap-8 sm:gap-36"}>
                         <div className={"w-48"}>
-                            <Image data={footer.image.responsiveImage}/>
+                            <Image data={footer.image.responsiveImage} alt={"Ikius logo"} objectFit={"contain"}/>
                             <p className={"max-w-[150px] my-4"}>{footer.description}</p>
                         </div>
                         <div>
-                            <h3 className={"font-bold mb-4"}>Blog posts</h3>
+                            <h2 className={"font-bold mb-4"}>Blog posts</h2>
 
                             <ul className={"list-none p-0"}>
                                 <li className={"py-2"}>

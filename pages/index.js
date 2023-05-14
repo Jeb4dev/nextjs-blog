@@ -13,7 +13,7 @@ export default function Home(props) {
     <Layout home posts={posts} footer={footer} formImage={data.frontpageContent.formImage} meta={content._seoMetaTags}>
       <header className={styles.header}>
         <h1 className={utilStyles.heading2Xl}>{content.name}</h1>
-        <Image data={content.image.responsiveImage} alt={"Illustrative image"} className={"rounded-full my-8"} />
+        <Image data={content.image.responsiveImage} alt={"Profile picture of fox"} className={"rounded-full my-8"} objectFit={"cover"} />
         <h2 className={"text-center max-w-lg"}>{content.description}</h2>
       </header>
       <main className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
