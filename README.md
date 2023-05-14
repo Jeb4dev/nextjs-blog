@@ -10,6 +10,7 @@ available [blog.jeb4.dev/](https://blog.jeb4.dev/).
 - [x] [Next.js](https://nextjs.org/)
 - [x] [Tailwind CSS](https://tailwindcss.com/)
 - [x] [DatoCMS](https://www.datocms.com/)
+- [x] [GraphQL](https://graphql.org/)
 - [x] [Vercel](https://vercel.com/)
 
 ## Getting Started
