@@ -13,6 +13,13 @@ available [blog.jeb4.dev/](https://blog.jeb4.dev/).
 - [x] [GraphQL](https://graphql.org/)
 - [x] [Vercel](https://vercel.com/)
 
+## Performance
+
+[![Google lighthouse performance analysis](https://github.com/Jeb4dev/nextjs-blog/assets/76889226/d5806c39-4635-4fe4-8ca9-86de9e8f6be2)](https://pagespeed.web.dev/analysis/https-blog-jeb4-dev/orql0617w4?form_factor=desktop)
+
+I was able to get full 100 scores on desktop, on mobile side google analytics lost few points of the performance score.
+
+
 ## Getting Started
 
 First, install the dependencies:
