@@ -10,7 +10,7 @@ export default function Post(props) {
   const footer = props.footer;
 
   return (
-    <Layout posts={props.allPostsData} footer={footer} formImage={false} meta={data._seoMetaTags}>
+    <Layout posts={props.allPostsData} footer={footer} formImage={false} meta={data._seoMetaTags} article={data}>
       <Head>
         <title>{data.title}</title>
       </Head>
