@@ -6,8 +6,8 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu,
-  Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans,
+    Helvetica Neue, sans-serif;
   line-height: 1.6;
   font-size: 18px;
   width: 100%;
@@ -43,15 +43,14 @@ ul {
 }
 
 ol {
-    list-style: decimal;
+  list-style: decimal;
 }
 
 ul {
-    list-style: disc;
+  list-style: disc;
 }
 
-
 input[type="text"]:focus ~ .input-text,
-input[type="text"]:not(:placeholder-shown) ~ .input-text{
+input[type="text"]:not(:placeholder-shown) ~ .input-text {
   @apply text-purple-700 transform -translate-y-12 md:-translate-y-10 -translate-x-2 scale-75;
 }
