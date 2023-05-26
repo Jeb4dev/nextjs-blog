@@ -100,7 +100,6 @@ query MyQuery($slug: String, $first: IntType = "33") {
           sizes
           height
           bgColor
-          base64
           aspectRatio
           alt
         }
